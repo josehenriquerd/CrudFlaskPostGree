@@ -13,7 +13,10 @@ Funcionamento de Edição:
 ![image](https://github.com/user-attachments/assets/8735aabd-19b9-4612-bac8-96fc640f21d6)
 
 DockerFile:
-![image](https://github.com/user-attachments/assets/3cc8bcf4-42af-4544-b539-0bca8ea5bca4)
+![image](https://github.com/user-attachments/assets/daa65c96-73ac-417e-8e72-85e6f58542a5)
+
+DockerCompose:
+![image](https://github.com/user-attachments/assets/80182d1c-9e9b-415a-856c-22d54d164450)
 
 
 Comandos para gerar o build e rodar o docker:
@@ -24,12 +27,12 @@ Ao baixar o repositorio, abrir o cmd e ir até o diretorio onde a pasta foi baix
 
 Ao estar nesse diretorio, rodar:
 <code>
-docker build -t flaskapp .
+docker-compose up --build
 </code>
 
-Após rodar esse build, já pode rodar o docker:
+Após rodar esse build, já pode abrir o docker:
 <code>
-docker run -it -p 5000:5000 flaskapp
+http://127.0.0.1:5000/
 </code>
 
 
