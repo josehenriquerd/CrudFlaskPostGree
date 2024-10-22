@@ -9,6 +9,8 @@ services:
       POSTGRES_PASSWORD: your_secure_password
     ports:
       - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data # Monta o volume para persistência de dados
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "myuser", "-d", "produtos_db"]
       interval: 10s
@@ -26,3 +28,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
+
+volumes:
+  db_data:
+    driver: local
